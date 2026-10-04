@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr"
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QCM Culture Générale</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#1c1c1e">
+</head>
+<body>
+    <div class="faisceau f1"></div>
+    <div class="faisceau f2"></div>
+    <div class="faisceau f3"></div>
+    <div id="app">
+        <div class="entete">
+            <h1>QCM Culture Générale</h1>
+            <label class="theme-toggle">
+                <input type="checkbox" id="theme-toggle-input">
+                <span class="theme-toggle-slider"></span>
+            </label>
+        </div>
+        <div id="ecran-accueil">
+            <p id="acceuil-texte">Teste tes connaissances en <span style="color: #e08ae0;">Culture Générale</span>.<br><span style="color: rgb(165, 201, 24);">ENOCK HED</span> te met au <span style="color: #e08a4f;">défi</span>.<br><span style="color: rgb(204, 11, 140);">Prêt</span> ?</p> 
+            <button id="commencer-btn" class="restart-btn">Commencer</button>
+            <button id="stats-btn" class="restart-btn">Statistiques</button>
+        </div>
+        <div id="timer-circle-wrap" style="display:none;">
+            <svg id="timer-circle" viewBox="0 0 80 80">
+                <circle class="timer-track" cx="40" cy="40" r="34"></circle>
+                <circle class="timer-progress" cx="40" cy="40" r="34"></circle>
+            </svg>
+            <span id="timer-number">15</span>
+        </div>
+        <div id="progression" style="display:none;">Question <span id="progression-actuelle">1</span> / 20</div>
+        <div id="question" style="display:none;"></div>
+        <div id="choices" style="display:none;"></div>
+        <button id="indice-btn" class="restart-btn" style="display:none;">50:50</button>
+        <div id="ecran-fin" style="display:none;">
+            <div class="ecran-final">Score final : <span id="score-final-value">0</span> / 20</div>
+            <div id="ecran-fin-best" class="best"></div>
+            <button id="rejouer-btn" class="restart-btn">Rejouer</button>
+            <button id="stats-fin-btn" class="restart-btn">Statistiques</button>
+        </div>
+        <div id="ecran-stats" style="display:none;">
+            <h2 class="titre-stats">Statistiques</h2>
+            <h2 class="titre-stats">Badges</h2>
+            <div id="stats-badges"></div>
+            <div id="stats-niveaux"></div>
+            <h2 class="titre-stats">Dernières parties</h2>
+            <div id="stats-historique"></div>
+            <button id="stats-retour-btn" class="restart-btn">Retour</button>
+        </div>
+        <div id="annonce-niveau" style="display:none;">
+            <div id="niveau-texte"></div>
+        </div>
+        <div id="score" style="display:none;">Score : <span id="score-value">0</span></div>
+        <div id="serie" style="display:none;"></div>
+        <div id="best-score" style="display:none;">Meilleur score : <span id="best-score-value">0</span></div>
+        <button id="share-btn" class="share-btn" style="display:none;">Partager mon score</button>
+        <canvas id="canvas-partage" width="600" height="400" style="display:none;"></canvas>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
