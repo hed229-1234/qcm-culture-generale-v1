@@ -2,7 +2,7 @@
     "name": "QCM Culture Générale",
     "short_name": "QCM Culture",
     "description": "Teste ta connaissance en Culture Générale. Viens faire une mise à jour de tes connaissances.",
-    "start_url": "inde.html",
+    "start_url": "index.html",
     "display": "standalone",
     "background_color": "#1c1c1e",
     "theme_color": "#1c1c1e",
